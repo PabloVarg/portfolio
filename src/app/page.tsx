@@ -10,37 +10,49 @@ import { GrDocumentDownload } from "react-icons/gr";
 export default function Home() {
   return (
     <main>
-      <MeteorsHero>
-        <Image
-          className="mb-4 rounded-3xl border-gold transition-shadow"
-          src="/images/photos/avatar-hero.webp"
-          alt="Pablo Vargas Bermudez"
-          width={640 * 0.5}
-          height={640 * 0.5}
-        />
-
-        <TextGenerateEffect
-          className="mb-0"
-          fontClasses="text-4xl"
-          words="Pablo Vargas Bermúdez"
-        />
-        <TextGenerateEffect
-          fontClasses="text-base text-wood"
-          words="Software Backend Engineer"
-        />
-
-        <MainButton className="mt-8">
-          <span className="flex items-center justify-evenly gap-4">
-            <span className="pr-4">Resume</span>
-            <GrDocumentDownload />
-          </span>
-        </MainButton>
-      </MeteorsHero>
-      <div className="bg-light-gold">
-        <div className="grid place-items-center">
-          <InfiniteMovingCards items={companies} />
-        </div>
-      </div>
+      <Hero />
+      <Companies />
     </main>
+  );
+}
+
+function Hero() {
+  return (
+    <MeteorsHero>
+      <Image
+        className="mb-4 rounded-3xl border-gold transition-shadow"
+        src="/images/photos/avatar-hero.webp"
+        alt="Pablo Vargas Bermudez"
+        width={640 * 0.5}
+        height={640 * 0.5}
+      />
+
+      <TextGenerateEffect
+        className="mb-0"
+        fontClasses="text-4xl"
+        words="Pablo Vargas Bermúdez"
+      />
+      <TextGenerateEffect
+        fontClasses="text-base text-wood"
+        words="Software Backend Engineer"
+      />
+
+      <MainButton className="mt-8">
+        <span className="flex items-center justify-evenly gap-4">
+          <span className="pr-4">Resume</span>
+          <GrDocumentDownload />
+        </span>
+      </MainButton>
+    </MeteorsHero>
+  );
+}
+
+function Companies() {
+  return (
+    <div className="bg-light-gold">
+      <div className="grid place-items-center">
+        <InfiniteMovingCards items={companies} />
+      </div>
+    </div>
   );
 }
