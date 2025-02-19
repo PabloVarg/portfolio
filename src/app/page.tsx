@@ -1,6 +1,8 @@
 import MainButton from "@/components/Buttons/MainButton";
+import { InfiniteMovingCards } from "@/components/Carousels/InfiniteScroll";
 import MeteorsHero from "@/components/MeteorsHero/meteors";
 import { TextGenerateEffect } from "@/components/Text/GenerateText";
+import { companies } from "@/constants/companies/companies";
 import Image from "next/image";
 
 import { GrDocumentDownload } from "react-icons/gr";
@@ -34,6 +36,11 @@ export default function Home() {
           </span>
         </MainButton>
       </MeteorsHero>
+      <div className="bg-light-gold">
+        <div className="grid place-items-center">
+          <InfiniteMovingCards items={companies} />
+        </div>
+      </div>
     </main>
   );
 }
