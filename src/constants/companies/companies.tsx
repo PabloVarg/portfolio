@@ -5,7 +5,7 @@ export const companies = [
   {
     name: "TecNM",
     content: (
-      <Link href="https://www.tecnm.mx/">
+      <Link target="_blank" href="https://www.tecnm.mx/">
         <Image
           src="/images/companies/tecnm.webp"
           alt="TecNM"
@@ -18,7 +18,7 @@ export const companies = [
   {
     name: "Rocktech",
     content: (
-      <Link href="#">
+      <Link target="_blank" href="#">
         <Image
           src="/images/companies/rocktech.webp"
           alt="Rocktech"
@@ -31,7 +31,7 @@ export const companies = [
   {
     name: "BB",
     content: (
-      <Link href="https://www.bb.com.mx">
+      <Link target="_blank" href="https://www.bb.com.mx">
         <Image
           src="/images/companies/bajio.webp"
           alt="Banco del Bajio"
@@ -44,7 +44,7 @@ export const companies = [
   {
     name: "Alluxi",
     content: (
-      <Link href="https://www.alluxi.com/">
+      <Link target="_blank" href="https://www.alluxi.com/">
         <Image
           src="/images/companies/alluxi.webp"
           alt="Alluxi"
