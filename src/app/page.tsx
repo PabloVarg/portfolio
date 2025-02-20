@@ -2,7 +2,9 @@ import MainButton from "@/components/Buttons/MainButton";
 import { InfiniteMovingCards } from "@/components/Carousels/InfiniteScroll";
 import MeteorsHero from "@/components/MeteorsHero/meteors";
 import { TextGenerateEffect } from "@/components/Text/GenerateText";
+import { Timeline } from "@/components/Timeline/Timeline";
 import { companies } from "@/constants/companies/companies";
+import { timelineItems } from "@/constants/timeline/timeline";
 import Image from "next/image";
 
 import { GrDocumentDownload } from "react-icons/gr";
@@ -12,6 +14,7 @@ export default function Home() {
     <main>
       <Hero />
       <Companies />
+      <Experience />
     </main>
   );
 }
@@ -54,5 +57,15 @@ function Companies() {
         <InfiniteMovingCards items={companies} />
       </div>
     </div>
+  );
+}
+
+function Experience() {
+  return (
+    <Timeline
+      title="My Experience"
+      description="A journey through my professional and academic milestones, highlighting key projects, roles, and achievements that have shaped my growth as a backend-focused software engineer."
+      data={timelineItems}
+    />
   );
 }
