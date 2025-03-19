@@ -1,10 +1,12 @@
 import MainButton from "@/components/Buttons/MainButton";
+import { ExpandableCards } from "@/components/Cards/ExpandableCards";
 import { InfiniteMovingCards } from "@/components/Carousels/InfiniteScroll";
 import MeteorsHero from "@/components/MeteorsHero/meteors";
 import FlipWords from "@/components/Text/FlipText";
 import { TextGenerateEffect } from "@/components/Text/GenerateText";
 import { Timeline } from "@/components/Timeline/Timeline";
 import { companies } from "@/constants/companies/companies";
+import { technologyCards } from "@/constants/technologies/cards";
 import { timelineItems } from "@/constants/timeline/timeline";
 import Image from "next/image";
 
@@ -16,6 +18,7 @@ export default function Home() {
       <Hero />
       <Companies />
       <AboutMe />
+      <Technologies />
       <Experience />
     </main>
   );
@@ -106,4 +109,8 @@ function AboutMe() {
       </div>
     </div>
   );
+}
+
+function Technologies() {
+  return <ExpandableCards cards={technologyCards} />;
 }
