@@ -87,22 +87,34 @@ function AboutMe() {
       />
 
       <div className="text-lg">
+        <h1 className="text-2xl underline decoration-light-gold mb-4">
+          <span className="text-light-gold">P</span>
+          ablo <span className="text-light-gold">Var</span>
+          gas <span className="text-light-gold">Ber</span>
+          mudez <span className="text-light-gold">(pvarber)</span>
+        </h1>
+
         <p className="mb-4">
           I&apos;m a software engineer specializing in backend development, with
           a strong focus on <span className="text-light-gold">Go</span> and{" "}
           <span className="text-light-gold">Python</span>.
         </p>
         <p className="mb-8">
-          I graduated with honors from Tecnológico Nacional de México (TecNM)
-          with a Bachelor&apos;s degree in Computer Systems Engineering as{" "}
+          I graduated with honors from "Tecnológico Nacional de México" (TecNM)
+          with a Bachelor&apos;s degree in Computer Science{" "}
           <span className="text-light-gold">top of my generation</span>.
         </p>
 
         <span className="text-3xl overflow-hidden">
-          I&apos;m deeply passionate about
+          I&apos;m deeply passionate about:
           <br />
           <FlipWords
-            words={["Algorithms", "Distributed Systems", "Backend"]}
+            words={[
+              "Algorithms",
+              "Distributed Systems",
+              "Backend",
+              "Microservices",
+            ]}
             className="text-light-gold"
           />
         </span>
