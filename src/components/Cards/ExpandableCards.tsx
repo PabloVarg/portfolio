@@ -89,14 +89,6 @@ export function ExpandableCards({ cards }: Props) {
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 {active.src({ className: "text-light-gold w-full h-64" })}
-                {/* <Image */}
-                {/*   priority */}
-                {/*   width={200} */}
-                {/*   height={200} */}
-                {/*   src={active.src} */}
-                {/*   alt={active.title} */}
-                {/*   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-contain object-top" */}
-                {/* /> */}
               </motion.div>
 
               <div>
@@ -116,17 +108,19 @@ export function ExpandableCards({ cards }: Props) {
                     </motion.p>
                   </div>
 
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-light-gold text-black"
-                  >
-                    {active.ctaText}
-                  </motion.a>
+                  {active.ctaText && active.ctaLink && (
+                    <motion.a
+                      layout
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      href={active.ctaLink}
+                      target="_blank"
+                      className="px-4 py-3 text-sm rounded-full font-bold bg-light-gold text-black"
+                    >
+                      {active.ctaText}
+                    </motion.a>
+                  )}
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -144,7 +138,7 @@ export function ExpandableCards({ cards }: Props) {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
+      <ul className="md:max-w-2xl lg:max-w-4xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-4">
         {cards.map((card) => (
           <motion.div
             layoutId={`card-${card.title}-${id}`}
@@ -158,13 +152,6 @@ export function ExpandableCards({ cards }: Props) {
                 className="p-4"
               >
                 {card.src({ className: "text-light-gold w-full h-64" })}
-                {/* <Image */}
-                {/*   width={100} */}
-                {/*   height={100} */}
-                {/*   src={card.src} */}
-                {/*   alt={card.title} */}
-                {/*   className="h-60 w-full  rounded-lg object-contain object-top" */}
-                {/* /> */}
               </motion.div>
               <div className="flex justify-center items-center flex-col">
                 <motion.h3
