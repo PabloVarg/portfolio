@@ -8,6 +8,7 @@ import { TextGenerateEffect } from "@/components/Text/GenerateText";
 import { Timeline } from "@/components/Timeline/Timeline";
 import { academicHighlights } from "@/constants/academy/academy";
 import { companies } from "@/constants/companies/companies";
+import { projectCards } from "@/constants/projects/projects";
 import { technologyCards } from "@/constants/technologies/cards";
 import { timelineItems } from "@/constants/timeline/timeline";
 import Image from "next/image";
@@ -22,6 +23,7 @@ export default function Home() {
       <AboutMe />
       <Technologies />
       <Academy />
+      <Projects />
       <Experience />
     </main>
   );
@@ -134,4 +136,15 @@ function Technologies() {
 
 function Academy() {
   return <OverlappedCards testimonials={academicHighlights} />;
+}
+
+function Projects() {
+  return (
+    <>
+      <h3 className="text-center text-3xl text-wood mb-2 font-bold">
+        Highlighted projects
+      </h3>
+      <ExpandableCards cards={projectCards} />
+    </>
+  );
 }
