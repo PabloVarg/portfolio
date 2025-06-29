@@ -25,6 +25,7 @@ export default {
         gold: "#ffcc00",
         "light-gold": "#FFE9BD",
         wood: "#A47449",
+        "dark-wood": "#4A3728",
       },
     },
   },
