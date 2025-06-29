@@ -46,10 +46,12 @@ function Hero() {
       />
 
       <MainButton className="mt-8">
-        <span className="flex items-center justify-evenly gap-4">
-          <span className="pr-4">Resume</span>
-          <GrDocumentDownload />
-        </span>
+        <a href={"/files/cv.pdf"} download={true}>
+          <span className="flex items-center justify-evenly gap-4">
+            <span className="pr-4">Resume</span>
+            <GrDocumentDownload />
+          </span>
+        </a>
       </MainButton>
     </MeteorsHero>
   );
