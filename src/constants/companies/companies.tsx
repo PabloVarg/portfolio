@@ -54,4 +54,17 @@ export const companies = [
       </Link>
     ),
   },
+  {
+    name: "PraxisPro AI",
+    content: (
+      <Link target="_blank" href="https://www.praxispro.ai/">
+        <Image
+          src="/images/companies/praxispro.webp"
+          alt="PraxisPro"
+          width={250}
+          height={50}
+        />
+      </Link>
+    ),
+  },
 ];
