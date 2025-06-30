@@ -108,8 +108,8 @@ function AboutMe() {
           <span className="text-light-gold">Python</span>.
         </p>
         <p className="mb-8">
-          I graduated with honors from "Tecnológico Nacional de México" (TecNM)
-          with a Bachelor&apos;s degree in Computer Science{" "}
+          I graduated with honors from &quot;Tecnológico Nacional de
+          México&quot; (TecNM) with a Bachelor&apos;s degree in Computer Science{" "}
           <span className="text-light-gold">top of my generation</span>.
         </p>
 

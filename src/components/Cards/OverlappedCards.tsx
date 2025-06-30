@@ -3,8 +3,9 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { motion, AnimatePresence } from "motion/react";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import clsx from "clsx";
+import Image from "next/image";
 
 export type OverlappedContent = {
   text: string;
@@ -14,10 +15,8 @@ export type OverlappedContent = {
 };
 export const OverlappedCards = ({
   testimonials,
-  autoplay = false,
 }: {
   testimonials: OverlappedContent[];
-  autoplay?: boolean;
 }) => {
   const [active, setActive] = useState(0);
 
@@ -32,13 +31,6 @@ export const OverlappedCards = ({
   const isActive = (index: number) => {
     return index === active;
   };
-
-  useEffect(() => {
-    if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [autoplay]);
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 21) - 10;
@@ -80,7 +72,7 @@ export const OverlappedCards = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <img
+                  <Image
                     src={testimonial.src}
                     alt={testimonial.name}
                     width={500}

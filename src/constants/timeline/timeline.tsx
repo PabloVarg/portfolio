@@ -91,11 +91,11 @@ export const timelineItems: TimelineEntry[] = [
           Rocktech (June 2022 - April 2023)
         </h3>
         Developed an innovative business diagnostic tool integrating ChatGPT
-        through OpenAI's API with customized prompts. Built "Equity Manager," a
-        comprehensive system for managing private equity investments using
-        Django, GraphQL, and Next.js. Applied complex financial formulas for
-        interest calculations and integrated with Banxico's APIs for real-time
-        financial metrics
+        through OpenAI&apos;s API with customized prompts. Built &quot;Equity
+        Manager,&quot; a comprehensive system for managing private equity
+        investments using Django, GraphQL, and Next.js. Applied complex
+        financial formulas for interest calculations and integrated with
+        Banxico&apos;s APIs for real-time financial metrics
       </div>
     ),
   },
@@ -116,10 +116,10 @@ export const timelineItems: TimelineEntry[] = [
         <h3 className="text-light-gold mb-2 text-2xl">
           Rocktech (March 2022 - June 2022)
         </h3>
-        Developed a complete Content Management System for restaurant "La
-        Cocinoteca," managing blogs, menus, and galleries using Django, React,
-        and Next.js. Gained foundational experience in full-stack development
-        and client collaboration
+        Developed a complete Content Management System for restaurant &quot;La
+        Cocinoteca,&quot; managing blogs, menus, and galleries using Django,
+        React, and Next.js. Gained foundational experience in full-stack
+        development and client collaboration
       </div>
     ),
   },
