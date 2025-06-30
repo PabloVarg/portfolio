@@ -17,14 +17,14 @@ import { GrDocumentDownload } from "react-icons/gr";
 
 export default function Home() {
   return (
-    <main>
+    <main className="py-6">
       <Hero />
       <Companies />
       <AboutMe />
       <Technologies />
       <Academy />
-      <Projects />
       <Experience />
+      <Projects />
     </main>
   );
 }
@@ -64,7 +64,7 @@ function Hero() {
 
 function Companies() {
   return (
-    <div className="bg-light-gold">
+    <div className="bg-light-gold" id="companies">
       <div className="grid place-items-center">
         <InfiniteMovingCards items={companies} />
       </div>
@@ -73,12 +73,19 @@ function Companies() {
 }
 
 function Experience() {
-  return <Timeline data={timelineItems} />;
+  return (
+    <div id="experience">
+      <Timeline data={timelineItems} />
+    </div>
+  );
 }
 
 function AboutMe() {
   return (
-    <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 py-16">
+    <div
+      className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 py-16"
+      id="me"
+    >
       <Image
         className="mb-4 rounded-3xl border-gold transition-shadow"
         src="/images/photos/avatar-suit.webp"
@@ -125,20 +132,28 @@ function AboutMe() {
 }
 
 function Technologies() {
-  return <ExpandableCards cards={technologyCards} />;
+  return (
+    <div id="technologies">
+      <ExpandableCards cards={technologyCards} />
+    </div>
+  );
 }
 
 function Academy() {
-  return <OverlappedCards testimonials={academicHighlights} />;
+  return (
+    <div id="academy">
+      <OverlappedCards testimonials={academicHighlights} />
+    </div>
+  );
 }
 
 function Projects() {
   return (
-    <>
+    <div id="projects">
       <h3 className="text-center text-3xl text-wood mb-2 font-bold">
         Highlighted projects
       </h3>
       <ExpandableCards cards={projectCards} />
-    </>
+    </div>
   );
 }
