@@ -94,7 +94,7 @@ function AboutMe() {
         height={640 * 0.5}
       />
 
-      <div className="text-lg">
+      <div className="text-lg px-4 md:px-0">
         <h1 className="text-2xl underline decoration-light-gold mb-4">
           <span className="text-light-gold">P</span>
           ablo <span className="text-light-gold">Var</span>

@@ -3,6 +3,8 @@ import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { FloatingNav } from "@/components/NavBar/NavBar";
 import { navItems } from "@/constants/navbar/navbar";
+import { FloatingDock } from "@/components/Docks/FloatingDock";
+import { contactDockItems } from "@/constants/dock/contact";
 
 const geistSans = Roboto({
   variable: "--font-roboto-sans",
@@ -32,6 +34,9 @@ export default function RootLayout({
       >
         <FloatingNav navItems={navItems} />
         {children}
+        <div className="flex fixed bottom-0 left-1/2 -translate-x-1/2 z-50">
+          <FloatingDock items={contactDockItems} />
+        </div>
       </body>
     </html>
   );
