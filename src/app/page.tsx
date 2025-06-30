@@ -73,13 +73,7 @@ function Companies() {
 }
 
 function Experience() {
-  return (
-    <Timeline
-      title="My Experience"
-      description="A journey through my professional and academic milestones, highlighting key projects, roles, and achievements that have shaped my growth as a backend-focused software engineer."
-      data={timelineItems}
-    />
-  );
+  return <Timeline data={timelineItems} />;
 }
 
 function AboutMe() {

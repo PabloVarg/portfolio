@@ -8,15 +8,7 @@ export type TimelineEntry = {
   content: React.ReactNode;
 };
 
-export const Timeline = ({
-  data,
-  title,
-  description,
-}: {
-  data: TimelineEntry[];
-  title: string;
-  description: string;
-}) => {
+export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -41,15 +33,6 @@ export const Timeline = ({
       className="w-full bg-neutral-950 font-sans md:px-10"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-light-gold max-w-4xl">
-          {title}
-        </h2>
-        <p className="text-neutral-300 text-sm md:text-base max-w-sm">
-          {description}
-        </p>
-      </div>
-
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
