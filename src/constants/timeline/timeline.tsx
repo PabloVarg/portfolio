@@ -17,7 +17,7 @@ export const timelineItems: TimelineEntry[] = [
     content: (
       <div>
         <h3 className="text-light-gold mb-2 text-2xl">
-          Rocktech (April 2025 - Present)
+          PraxisPro (April 2025 - Present)
         </h3>
         Building the future of sales training on the pharma field by creating
         and mantaining backend scalable solutions
